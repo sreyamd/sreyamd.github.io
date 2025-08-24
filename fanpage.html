@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Justin Bieber Fanpage 💖🎤</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+    }
+    header {
+      background: #ff69b4;
+      color: white;
+      padding: 20px;
+      font-size: 2em;
+      text-shadow: 2px 2px #d63384;
+    }
+    .intro {
+      padding: 20px;
+      font-size: 1.2em;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px;
+    }
+    .gallery img {
+      width: 250px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .songs {
+      background: white;
+      border-radius: 15px;
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .songs h2 {
+      margin-bottom: 15px;
+      color: #ff69b4;
+    }
+    .songs ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1em;
+    }
+    .songs ul li {
+      background: #ffe6f0;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+    .songs ul li:hover {
+      background: #ffd6eb;
+    }
+    footer {
+      margin-top: 30px;
+      padding: 20px;
+      background: #ff69b4;
+      color: white;
+    }
+    button {
+      background: #ff85c1;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1em;
+      color: white;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ff4da6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🎶 Justin Bieber Fanpage 💖
+  </header>
+
+  <section class="intro">
+    <p>Welcome Beliebers! 💕✨ This is your ultimate fanpage for Justin Bieber 🎤💎. 
+    Add your favorite photos, share the love, and vibe with his music! 🎶</p>
+  </section>
+
+  <section class="gallery">
+    <!-- Replace the placeholders below with Justin Bieber images -->
+    <img src="images/justin1.jpg" alt="Justin Bieber">
+    <img src="images/justin2.jpg" alt="Justin Bieber">
+    <img src="images/justin3.jpg" alt="Justin Bieber">
+  </section>
+
+  <section class="songs">
+    <h2>🎵 Justin Bieber’s Songs 🎵</h2>
+    <ul id="songList">
+      <li><a href="https://www.youtube.com/watch?v=kffacxfA7G4" target="_blank">Baby</a></li>
+      <li><a href="https://www.youtube.com/watch?v=fRh_vgS2dFE" target="_blank">Sorry</a></li>
+      <li><a href="https://www.youtube.com/watch?v=oyEuk8j8imI" target="_blank">Love Yourself</a></li>
+      <li><a href="https://www.youtube.com/watch?v=8EJ3zbKTWQ8" target="_blank">Yummy</a></li>
+      <li><a href="https://www.youtube.com/watch?v=DK_0jXPuIr0" target="_blank">What Do You Mean?</a></li>
+      <li><a href="https://www.youtube.com/watch?v=3AyMjyHu1bA" target="_blank">Intentions</a></li>
+      <li><a href="https://www.youtube.com/watch?v=tQ0yjYUFKAE" target="_blank">Peaches</a></li>
+      <li><a href="https://www.youtube.com/watch?v=4GuqB1BQVr4" target="_blank">Boyfriend</a></li>
+      <li><a href="https://www.youtube.com/watch?v=R4em3LKQCAQ" target="_blank">As Long As You Love Me</a></li>
+      <li><a href="https://www.youtube.com/watch?v=_Z5-P9v3F8w" target="_blank">Never Say Never</a></li>
+    </ul>
+    <button onclick="addSong()">➕ Add Your Favorite Song</button>
+  </section>
+  
+
+  <footer>
+    Made with 💖 by Beliebers everywhere ✨
+  </footer>
+
+  <script>
+    function addSong() {
+      let newSong = prompt("🎶 Enter your favorite Justin Bieber song:");
+      if (newSong) {
+        let li = document.createElement("li");
+        li.textContent = newSong;
+        document.getElementById("songList").appendChild(li);
+      }
+    }
+  </script>
+</body>
+</html>
